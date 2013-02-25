@@ -1,4 +1,28 @@
+require "erb"
+
 namespace :workers do
+
+  task :upload, :name do |t, args|
+    Dir.chdir 'workers'
+    Dir.chdir args[:name].to_s
+
+    p `iron_worker upload #{args[:name].to_s}`
+  end
+
+  task :queue, :name do |t, args|
+    Dir.chdir 'workers'
+    Dir.chdir args[:name].to_s
+
+    p `iron_worker queue #{args[:name].to_s}`
+  end
+
+  #task :test, :name do |t, args|
+  #  Dir.chdir 'workers'
+  #  Dir.chdir args[:name].to_s
+  #
+  #  p `iron_worker run #{args[:name].to_s}` 
+  #end
+  
   task :generate, :name do |t, args|
 
     Dir.chdir 'workers'
@@ -23,13 +47,13 @@ namespace :workers do
       end
     end
 
-    # iron.json
-    File.open("../../templates/iron.json.erb") do |io|
-      template = ERB.new(io.read)
+    # unit test for worker -- in-progress
+    #File.open("../../templates/test.erb") do |io|
+    #  template = ERB.new(io.read)
 
-      File.open "iron.json", "w" do |out| 
-        out.puts template.result binding
-      end
-    end
+    #  File.open "test.rb", "w" do |out| 
+    #    out.puts template.result binding
+    #  end
+    #end
   end
 end

@@ -1,2 +1,17 @@
 require "aws/s3"
+require "parse-ruby-client"
+require "iron_worker_ng"
+require "configuration"
 
+
+@config = Configuration.keys
+
+AWS::S3::Base.establish_connection!(
+  :access_key_id     => @config["aws_s3"]["access_key_id"],
+  :secret_access_key => @config["aws_s3"]["secret_access_key"]
+)
+
+Parse.init :application_id => @config["parse"]["application_id"],
+           :api_key        => @config["parse"]["api_key"]
+
+@iron_worker_client = IronWorkerNG::Client.new(:token => @config["iron"]["token"], :project_id => @config["iron"]["project_id"])

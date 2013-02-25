@@ -1,0 +1,41 @@
+GEM
+  specs:
+    aws-s3 (0.6.3)
+      builder
+      mime-types
+      xml-simple
+    builder (3.0.4)
+    coderay (1.0.8)
+    iron_core (0.5.1)
+      rest (>= 2.2.0)
+    iron_worker_ng (0.12.2)
+      bundler (>= 1.0.0)
+      iron_core (>= 0.4.2)
+      rubyzip (>= 0.9.9)
+    method_source (0.8.1)
+    mime-types (1.21)
+    net-http-persistent (2.8)
+    parse-ruby-client (0.1.12)
+      patron
+    patron (0.4.18)
+    pry (0.9.10)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.3.1)
+    rest (2.2.0)
+      net-http-persistent
+      rest-client (>= 0.3.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rubyzip (0.9.9)
+    slop (3.3.3)
+    xml-simple (1.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  aws-s3
+  iron_worker_ng
+  parse-ruby-client
+  pry
