@@ -4,13 +4,13 @@ require_relative "config"
 require "pry"
 
 
-keys = Configuration.keys
+@config = Configuration.keys
 
 binding.pry
 
-#task = Parse::Object.new("Task")
-#task.save
-#task.started_at = DateTime.now
+task = Parse::Object.new("Task")
+task.save
+task.started_at = DateTime.now
 
 #client = IronWorker::Client.new
 #document_urls = []
