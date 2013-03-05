@@ -34,7 +34,7 @@ Under the hood, you'll get parallelism and remote code execution from IronWorker
 
 3. Curation. The legal informatics/open government/open data communities are coalescing in a great way. Many standalone scripts are emerging for specific text processing tasks. I'd like this repo to be a central place where anyone can quickly make use of these great tools. Batteries included will lower barriers to entry.
 
-I envision something as simple as installing a Ruby gem, adding some API keys, and mixing and matching text processors, then running your corpus through in a simple loop.
+I envision something as simple as installing a Ruby gem, adding some API keys, mixing and matching text processors to suit your needs, then running your corpus through in a simple loop.
 
 ## Progress
 
@@ -43,4 +43,5 @@ The sample code above is completely made up. I'm slowly patching together a solu
 ## Questions
 
 Email: adelevie@gmail.com
-Twitter: twitter.com/adelevie
+
+Twitter: http://twitter.com/adelevie
