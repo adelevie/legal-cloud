@@ -36,7 +36,7 @@ Under the hood, you'll get parallelism and remote code execution from IronWorker
 
 4. Standardization. The legal informatics community could gain by adopting a standard project structure.
 
-5. Verification. This builds off of point 4. Need to show how you arrived a certain set of findings? This could be done in maybe ~20 lines of code. 
+5. Verification. This builds off of point 4. Need to show how you arrived at a certain set of findings? This could be done in maybe ~20 lines of code.
 
 I envision something as simple as installing a Ruby gem, adding some API keys, mixing and matching text processors to suit your needs, then running your corpus through in a simple loop.
 
