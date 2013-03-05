@@ -14,8 +14,8 @@ array_of_documents = [...] # a corpus of thousands of documents
 results = LegalCloud::ProcessBlock.new(array_of_documents) do |document|
   {
     "citations"   => LegalCloud::Citations.extract!(document),
-    "definitions" => LegalCloud::Definitions.extract(document),
-    "names"       => LegalCloud::Calais::Names.extract(document)
+    "definitions" => LegalCloud::Definitions.extract!(document),
+    "names"       => LegalCloud::Calais::Names.extract!(document)
   }
 end
 
