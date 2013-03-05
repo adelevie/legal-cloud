@@ -1,5 +1,7 @@
 GEM
+  remote: https://rubygems.org/
   specs:
+    addressable (2.3.3)
     aws-s3 (0.6.3)
       builder
       mime-types
@@ -12,8 +14,11 @@ GEM
       bundler (>= 1.0.0)
       iron_core (>= 0.4.2)
       rubyzip (>= 0.9.9)
+    libwebsocket (0.1.5)
+      addressable
     method_source (0.8.1)
     mime-types (1.21)
+    multi_json (1.6.1)
     net-http-persistent (2.8)
     parse-ruby-client (0.1.12)
       patron
@@ -22,12 +27,21 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.3.1)
+    pusher (0.11.3)
+      multi_json (~> 1.0)
+      signature (~> 0.1.6)
+    pusher-client (0.2.2)
+      addressable (~> 2.3.1)
+      libwebsocket (= 0.1.5)
+      ruby-hmac (~> 0.4.0)
     rest (2.2.0)
       net-http-persistent
       rest-client (>= 0.3.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    ruby-hmac (0.4.0)
     rubyzip (0.9.9)
+    signature (0.1.6)
     slop (3.3.3)
     xml-simple (1.1.1)
 
@@ -39,3 +53,5 @@ DEPENDENCIES
   iron_worker_ng
   parse-ruby-client
   pry
+  pusher
+  pusher-client

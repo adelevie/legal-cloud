@@ -1,0 +1,9 @@
+runtime "ruby"
+exec "main.rb"
+
+gem "bundler"
+gem "parse-ruby-client"
+gem "iron_worker_ng"
+gem "aws-s3"
+file "../../configuration.rb"
+full_remote_build true
